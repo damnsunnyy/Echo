@@ -1,16 +1,13 @@
-# Echo Logging Enhancement TODO
+# Echo project status
 
-## Plan Breakdown
-1. ✅ **Confirm plan** - User approved edits to listen.py, App.js, start.sh
-2. ✅ **Edit backend/voice/listen.py** - Added "🔴 Listening..." log before record_audio
-3. ✅ **Edit dashboard/src/App.js** - Added timestamps, status bar, auto-scroll, clear button, better UI
-4. ✅ **Check start.sh** - Confirmed runs Ollama + API server + listener + dashboard perfectly
-5. **Test full stack** - bash start.sh, check http://localhost:3000 logs/status
-6. **Complete task**
+Echo is an early local desktop prototype. The voice loop, local model integration, allowlisted actions, preference memory, FastAPI service, event dashboard, and Electron shell are present in the repository.
 
-**Progress: Steps 1-4 done. Next: Test and complete**
+## Follow-up before broader use
 
-6. **Complete task**
+- Exercise the full microphone → transcription → Ollama → speech output flow on a configured Mac and Windows machine.
+- Review local memory behavior and provide a simple way to inspect and clear saved preferences.
+- Confirm the Electron shell, dashboard, API, and listener shut down cleanly together.
+- Add focused automated coverage for the event API, memory, and allowlisted actions.
+- Document the exact Ollama model and optional speech-output setup for each supported platform.
 
-**Progress: Step 1 done. Next: Step 2**
-
+The dashboard reconnects to the local WebSocket service and shows an explicit offline state. It is a local development interface, not a hosted service.

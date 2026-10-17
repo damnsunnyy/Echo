@@ -8,8 +8,14 @@ Echo is a local-first desktop voice assistant prototype. It combines wake-word l
 - Local language-model responses through Ollama (`mistral` by default)
 - Small allowlisted desktop actions: open an app and search the web
 - Local preference and fact memory, stored in `memory.json` at runtime
-- FastAPI log endpoints and a WebSocket feed for the dashboard
+- FastAPI log endpoints and a WebSocket event feed for the dashboard
 - Electron desktop window for the dashboard
+
+The dashboard shows whether the local event service is connected, reconnects after a disconnect, and keeps the latest 100 events in the current browser session. It does not store the session feed.
+
+## Dashboard preview
+
+![Echo dashboard showing its standby state and offline local service status](dashboard/public/preview.jpg)
 
 ## Local setup
 
